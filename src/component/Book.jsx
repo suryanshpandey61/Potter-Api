@@ -31,10 +31,10 @@ function Book() {
       </Link>
       <div className='grid grid-cols-2 w-[700px] mx-auto  mt-5 gap-7'>
         {loading ? (
-          <h1>Loading...</h1>
+          <div class="loader"></div>
         ) : (
           post.map((item, index) => (
-            <div key={index} className='flex flex-col w-[250px] gap-x-7 mx-auto  rounded-xl p-3 hover:scale-[1.07] transition-all duration-500 border border-black '>
+            <div key={index} className='flex flex-col w-[250px] gap-x-7 cursor-pointer mx-auto  rounded-xl p-3 hover:scale-[1.07] transition-all duration-500 border border-black '>
               <img src={item.cover} alt="Harry Potter Images" className='rounded-md' />
               <p className='text-xl font-semibold '>{item.title}</p>
             </div>

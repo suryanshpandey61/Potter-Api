@@ -32,10 +32,10 @@ function Character() {
       </Link>
       <div className='grid grid-cols-3 w-[900px] mx-auto  mt-5 gap-7'>
         {loading ? (
-          <h1>Loading...</h1>
+          <div class="loader"></div>
         ) : (
           post.map((item, index) => (
-            <div key={index} className='flex flex-col w-[250px]  mx-auto  rounded-xl p-3 hover:scale-[1.07] transition-all duration-500 border border-black '>
+            <div key={index} className='flex flex-col w-[250px]  mx-auto  rounded-xl p-3 hover:scale-[1.07] cursor-pointer transition-all duration-500 border border-black '>
               <img src={item.image} alt="Harry Potter Images" className='rounded-md' />
               <p className='text-xl font-semibold '>{item.name}</p>
             </div>

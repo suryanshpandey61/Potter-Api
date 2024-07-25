@@ -14,10 +14,11 @@ function App() {
   return (
     <>
 
-    
+      {/* navbar common hai isliye routes k bahar  rkhna visible in every path */}
       <Navbar path="/" />
       <Routes>
         
+        {/* make routes for each component by usind browser router and route  */}
         <Route path="/" element={<Book/>}/>
         <Route path='/character' element={<Character/>}/>
         <Route path='/spell' element={<Spell/>}/>
