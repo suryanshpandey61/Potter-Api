@@ -58,9 +58,9 @@ function Movie() {
           ) :
            (
             post.map((item, index) => (
-              <div key={index} className='flex flex-col w-[250px]  mx-auto  rounded-xl p-3 hover:scale-[1.07] transition-all duration-500 border border-black '>
-               
-                <p className='text-xl font-semibold '>{item.title}</p>
+              <div key={index} className='flex flex-col w-[250px] hover:shadow-md hover:shadow-black hover:border-none mx-auto  rounded-xl p-3 hover:scale-[1.07] transition-all duration-500 border border-black '>
+               <img src={item.poster} alt="Harry Potter Images" className='rounded-md' />
+                <p className='text-xl font-semibold '>{item.release_date}</p>
                 <p className=' text-white'>Director- {item.directors}</p>
                 
               </div>

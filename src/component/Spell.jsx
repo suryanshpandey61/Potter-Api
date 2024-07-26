@@ -35,7 +35,7 @@ function Spell() {
           <div class="loader"></div>
         ) : (
           post.map((item, index) => (
-            <div key={index} className='flex flex-col w-[250px]  mx-auto cursor-pointer  rounded-xl p-3 hover:scale-[1.07] transition-all duration-500 border border-black '>
+            <div key={index} className='flex flex-col w-[250px] shadow-md shadow-black hover:shadow-white   mx-auto cursor-pointer  rounded-xl p-3 hover:scale-[1.07] transition-all duration-500 border border-black '>
                <p className='text-xl font-semibold text-blue-600 '>{item.name}</p>
               <p className='text-white  '>Spell - {item.description}</p>
             </div>
