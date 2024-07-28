@@ -25,6 +25,9 @@ function Character() {
     loadCharacter();
   }, []);
 
+  //save the data which have only image and show only image card
+  const newData = post.filter(item => item.image);
+
   return (
     <div className='character-div w-[100vw] ml-[-30px] mb-[-20px] h-auto'>
       <Link to="/character">
@@ -34,20 +37,17 @@ function Character() {
         {loading ? (
           <div class="loader"></div>
         ) : (
-          post.map((item, index) => (
+          newData.map((item, index) => (
             <div key={index} className='flex flex-col w-[250px]  border-white hover:shadow-lg hover:shadow-rose-400 mx-auto  rounded-xl p-3 hover:scale-[1.07] cursor-pointer transition-all duration-500 border  '>
              
             
-                     
-            
-             {/* //if image exist then apply it otherwise show dateofbirth */}
-             {item.image && (
-              <img 
+             <img 
                 src={item.image} 
                 alt="Harry Potter Images" 
                 className='rounded-md' 
-              />
-            ) }
+              />      
+            
+             
              
               {/* <img src={(item.image) || ("")} alt="Harry Potter Images" className='rounded-md' /> */}
               <p className='text-xl font-semibold text-sky-400'>{item.name}</p>
