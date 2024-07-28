@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useState,useEffect } from 'react';
+import newImage from "../assets/harry.jpeg"
 function Character() {
 
   const [loading, setLoading] = useState(false);
@@ -25,8 +26,7 @@ function Character() {
     loadCharacter();
   }, []);
 
-  //save the data which have only image and show only image card
-  const newData = post.filter(item => item.image);
+
 
   return (
     <div className='character-div w-[100vw] ml-[-30px] mb-[-20px] h-auto'>
@@ -37,12 +37,11 @@ function Character() {
         {loading ? (
           <div class="loader"></div>
         ) : (
-          newData.map((item, index) => (
+          post.map((item, index) => (
             <div key={index} className='flex flex-col w-[250px]  border-white hover:shadow-lg hover:shadow-rose-400 mx-auto  rounded-xl p-3 hover:scale-[1.07] cursor-pointer transition-all duration-500 border  '>
-             
-            
+           
              <img 
-                src={item.image} 
+                src={item.image || newImage } 
                 alt="Harry Potter Images" 
                 className='rounded-md' 
               />      
