@@ -7,6 +7,7 @@ import Book from './component/Book'
 import Character from './component/Character';
 import Navbar from './component/Navbar';
 import Movie from './component/Movie';
+import Modal from './component/Modal';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path='/character' element={<Character/>}/>
         <Route path='/spell' element={<Spell/>}/>
         <Route path='/movie' element={<Movie/>}/>
+        <Route path='/modal' element={<Modal/>}/>
         
 
       </Routes>

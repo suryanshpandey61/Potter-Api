@@ -36,8 +36,21 @@ function Character() {
         ) : (
           post.map((item, index) => (
             <div key={index} className='flex flex-col w-[250px]  border-white hover:shadow-lg hover:shadow-rose-400 mx-auto  rounded-xl p-3 hover:scale-[1.07] cursor-pointer transition-all duration-500 border  '>
-              <img src={item.image} alt="Harry Potter Images" className='rounded-md' />
-              <p className='text-xl font-semibold text-slate-400'>{item.name}</p>
+             
+            
+                     
+            
+             {/* //if image exist then apply it otherwise show dateofbirth */}
+             {item.image && (
+              <img 
+                src={item.image} 
+                alt="Harry Potter Images" 
+                className='rounded-md' 
+              />
+            ) }
+             
+              {/* <img src={(item.image) || ("")} alt="Harry Potter Images" className='rounded-md' /> */}
+              <p className='text-xl font-semibold text-sky-400'>{item.name}</p>
             </div>
           ))
         )}
